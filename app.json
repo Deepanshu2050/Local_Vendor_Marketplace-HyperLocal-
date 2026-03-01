@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "LocalVendor",
+    "slug": "local-vendor-marketplace",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "localvendor",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6750A4"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.localvendor.marketplace"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#6750A4",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.localvendor.marketplace",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow LocalVendor to use your location to find nearby vendors."
+        }
+      ],
+      "expo-splash-screen"
+    ]
+  }
+}
