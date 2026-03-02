@@ -26,7 +26,9 @@
       "package": "com.localvendor.marketplace",
       "permissions": [
         "ACCESS_COARSE_LOCATION",
-        "ACCESS_FINE_LOCATION"
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
       ]
     },
     "web": {
@@ -42,6 +44,12 @@
         }
       ],
       "expo-splash-screen"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "aa743f36-5bd5-4a61-8052-e5a62706deec"
+      }
+    }
   }
 }

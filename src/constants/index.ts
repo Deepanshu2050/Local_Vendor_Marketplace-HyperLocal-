@@ -2,11 +2,11 @@ import { Category } from '../types';
 
 export const API_BASE_URL = __DEV__
     ? 'http://192.168.101.2:5000/api'
-    : 'https://your-production-api.com/api';
+    : 'https://local-vendor-marketplace-hyperlocal.onrender.com/api';
 
 export const SOCKET_URL = __DEV__
     ? 'http://192.168.101.2:5000'
-    : 'https://your-production-api.com';
+    : 'https://local-vendor-marketplace-hyperlocal.onrender.com';
 
 export const DEFAULT_RADIUS_KM = 10;
 export const MAX_RADIUS_KM = 50;
