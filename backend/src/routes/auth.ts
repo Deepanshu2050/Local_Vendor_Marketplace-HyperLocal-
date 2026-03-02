@@ -31,8 +31,8 @@ router.post('/register', async (req: AuthRequest, res: Response): Promise<void> 
         }
 
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET || 'secret', {
-            expiresIn: process.env.JWT_EXPIRES_IN || '7d',
-        });
+            expiresIn: (process.env.JWT_EXPIRES_IN || '7d') as string & jwt.SignOptions['expiresIn'],
+        } as jwt.SignOptions);
 
         const userObj = user.toObject();
         const { password: _, ...userWithoutPassword } = userObj;
@@ -62,8 +62,8 @@ router.post('/login', async (req: AuthRequest, res: Response): Promise<void> => 
         }
 
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET || 'secret', {
-            expiresIn: process.env.JWT_EXPIRES_IN || '7d',
-        });
+            expiresIn: (process.env.JWT_EXPIRES_IN || '7d') as string & jwt.SignOptions['expiresIn'],
+        } as jwt.SignOptions);
 
         const userObj = user.toObject();
         const { password: _, ...userWithoutPassword } = userObj;
